@@ -16,6 +16,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import ec.devworks.android.myappportfolio.ec.devworks.android.myappportfolio.util.CrazyColor;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -38,11 +40,9 @@ public class MainActivity extends ActionBarActivity {
         lista.add(boton5);
         lista.add(boton6);
 
-        RelativeLayout.LayoutParams l =new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-        l.setMargins(1,10,1,1);
         for(Button b: lista){
+                b.setBackgroundColor(Color.parseColor(CrazyColor.color()));
             final Button bf = b;
-            b.setLayoutParams(l);
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
